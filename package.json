@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "description": "Dead simple cronometer with text on top for daily stand-up meetings",
   "main": "main.js",
-  "author": "Axel León",
+  "author": {
+    "name": "Axel León",
+    "email": "axel.leon992@outlook.com"
+  },
   "license": "MIT",
   "private": false,
   "scripts": {
