@@ -10,7 +10,7 @@ let settingsWindow = null;
 const dragStateByWebContentsId = new Map();
 let currentSettings = {
   timeMs: 90000,
-  question: "Revivió José José. ¿Qué canción le pedirías que te cante?",
+  question: "Add your question here.",
 };
 
 const showMainContextMenu = () => {
