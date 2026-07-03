@@ -28,7 +28,7 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Build Windows installer
-        run: yarn dlx electron-builder --win nsis --publish never
+        run: npx --yes electron-builder@24.13.3 --win nsis --publish never
         env:
           CSC_IDENTITY_AUTO_DISCOVERY: "false"
 
@@ -62,7 +62,7 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Build Debian package
-        run: yarn dlx electron-builder --linux deb --publish never
+        run: npx --yes electron-builder@24.13.3 --linux deb --publish never
 
       - name: Upload Linux artifact
         uses: actions/upload-artifact@v4
