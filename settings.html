@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'"
+    />
+    <title>Settings</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 20px;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+        background: #f5f6fa;
+      }
+
+      .panel {
+        background: #ffffff;
+        border-radius: 10px;
+        padding: 16px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      }
+
+      h1 {
+        margin: 0 0 16px;
+        font-size: 20px;
+      }
+
+      label {
+        display: block;
+        margin-top: 12px;
+        margin-bottom: 6px;
+        font-weight: 600;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid #c8ced8;
+        border-radius: 6px;
+        padding: 10px;
+        font-size: 14px;
+      }
+
+      textarea {
+        min-height: 90px;
+        resize: vertical;
+      }
+
+      .actions {
+        margin-top: 16px;
+        text-align: right;
+      }
+
+      button {
+        border: none;
+        border-radius: 6px;
+        padding: 10px 14px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        background: #1f6feb;
+        color: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="panel">
+      <h1>Settings</h1>
+      <form id="settings-form">
+        <label for="time-input">Time (seconds)</label>
+        <input id="time-input" name="time" type="number" min="1" required />
+
+        <label for="question-input">Question</label>
+        <textarea id="question-input" name="question" required></textarea>
+
+        <div class="actions">
+          <button type="submit">Save</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="./settings.js"></script>
+  </body>
+</html>
